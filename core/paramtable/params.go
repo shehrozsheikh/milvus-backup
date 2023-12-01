@@ -76,7 +76,7 @@ func (p *BackupConfig) initBackupListDataParallelism() {
 }
 
 func (p *BackupConfig) initBackupCopyDataParallelism() {
-	size := p.Base.ParseIntWithDefault("backup.copydata.parallelism", 128)
+	size := p.Base.ParseIntWithDefault("backup.copydata.parallelism", 64)
 	p.BackupCopyDataParallelism = size
 }
 
